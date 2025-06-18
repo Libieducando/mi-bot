@@ -6,80 +6,68 @@
   <title>LibiEducando</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f1f5f9; /* Fondo suave */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    header {
-      background-color: #dbeafe; /* Color suave */
-      color: #1e3a8a;
-      width: 100%;
-      padding: 2rem 1rem;
+      background-color: #e9f4ff;
       text-align: center;
-    }
-
-    header h1 {
       margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #dbefff;
+      padding: 2rem 1rem 3rem;
+    }
+    h1 {
+      color: #0a1172;
       font-size: 2.5rem;
     }
-
-    header p {
-      margin: 0.5rem 0 0;
+    p {
       font-size: 1.2rem;
+      color: #333;
     }
-
-    .bot-container {
-      margin-top: 2rem;
-      padding: 1rem;
-      background-color: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      width: 90%;
+    .bot-avatar {
+      margin: -40px auto 20px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      background-color: white;
     }
-
-    .bot-image {
+    .bot-avatar img {
       width: 100%;
-      max-width: 300px;
-      display: block;
-      margin: 0 auto 1rem;
+      height: 100%;
+      object-fit: cover;
+    }
+    .chat-bubble {
+      display: inline-block;
+      background-color: #a34bc7;
+      color: white;
+      padding: 15px 20px;
       border-radius: 20px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      max-width: 70%;
+      font-size: 1rem;
     }
-
-    footer {
-      margin-top: 4rem;
-      padding: 1rem;
-      background-color: #e2e8f0;
-      width: 100%;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #475569;
+    .chat-container {
+      margin: 30px auto;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1><strong>LibiEducando</strong></h1>
+    <h1>LibiEducando</h1>
     <p>Tu asistente para tareas diarias de soporte</p>
   </header>
 
-  <main class="bot-container">
-    <img src="bot-icon.png" alt="Bot LibiEducando" class="bot-image" />
-    <!-- Inserta aquí el iframe del bot -->
-    <iframe
-      src="https://chat.openai.com"
-      width="100%"
-      height="500"
-      style="border:none; border-radius: 12px;"
-      title="Chat LibiEducando"
-    ></iframe>
-  </main>
+  <div class="bot-avatar">
+    <img src="bot-icon.png" alt="Bot avatar" />
+  </div>
+
+  <div class="chat-container">
+    <div class="chat-bubble">
+      hola, tienes formulario para cambiar el celular?
+    </div>
+  </div>
 
   <footer>
     © 2025 LibiEducando · Desarrollado con ❤️ para facilitar tu día
