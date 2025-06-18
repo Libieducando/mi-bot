@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LibiEducando</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #eef6ff;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background-color: #cce2ff;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #0b3d91;
+    }
+    .card {
+      background-color: #fff;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
+    .card img {
+      max-width: 300px;
+      height: auto;
+    }
+    .footer {
+      background-color: #cce2ff;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    .input-hint {
+      margin-top: 1.5rem;
+      background-color: #f2f2f2;
+      display: inline-block;
+      padding: 1rem 1.5rem;
+      border-radius: 30px;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LibiEducando</h1>
+    <p>Tu asistente para tareas diarias de soporte</p>
+  </header>
+
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Bot" />
+    <h2>LibiEducando</h2>
+    <p>¡Hola! Quiero ayudarte a encontrar lo que necesitas.<br/>¡Comencemos!</p>
+    <div class="input-hint">¿Qué tarea necesitas realizar? Te ayudo a buscar.</div>
+  </div>
+
+  <footer class="footer">
+    © 2025 LibiEducando · Desarrollado con ❤️ para facilitar tu día
+  </footer>
+
+  <!-- Cargar Botpress -->
+  <script src="https://cdn.botpress.cloud/webchat/v3/botpressWebChat.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Escribe tu mensaje...",
+      "botId": "libieducando-bot", // <--- Reemplaza con tu bot ID real de Botpress
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v3",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "libieducando-bot", // <--- Reemplaza con tu bot ID real de Botpress
+      "lazySocket": true,
+      "botName": "LibiEducando",
+      "stylesheet": "https://cdn.botpress.cloud/webchat/v3/themes/clean.css",
+      "showPoweredBy": false,
+      "className": "webchatIframe",
+      "containerWidth": "100%25",
+      "layoutWidth": "400px",
+      "enableTranscriptDownload": false,
+      "closeOnEscape": false
+    });
+
+    // Mostrar el chat automáticamente
+    window.addEventListener("load", () => {
+      window.botpressWebChat.sendEvent({ type: "show" });
+    });
+  </script>
+</body>
+</html>
