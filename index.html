@@ -8,47 +8,64 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #e9f4ff;
-      text-align: center;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
+
     header {
       background-color: #dbefff;
       padding: 2rem 1rem 3rem;
     }
+
     h1 {
       color: #0a1172;
       font-size: 2.5rem;
     }
+
     p {
       font-size: 1.2rem;
       color: #333;
     }
-    .bot-avatar {
-      margin: -40px auto 20px;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      background-color: white;
-    }
+
     .bot-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-top: -40px;
     }
+
+    .chat-container {
+      background-color: white;
+      margin: 30px auto;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+
     .chat-bubble {
-      display: inline-block;
       background-color: #a34bc7;
       color: white;
       padding: 15px 20px;
       border-radius: 20px;
-      max-width: 70%;
+      display: inline-block;
       font-size: 1rem;
+      max-width: 80%;
     }
-    .chat-container {
-      margin: 30px auto;
+
+    footer {
+      background-color: #dde6f1;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #333;
+      margin-top: 2rem;
+    }
+
+    footer span {
+      color: #e25581;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -59,18 +76,18 @@
     <p>Tu asistente para tareas diarias de soporte</p>
   </header>
 
-  <div class="bot-avatar">
-    <img src="bot-icon.png" alt="Bot avatar" />
-  </div>
-
   <div class="chat-container">
-    <div class="chat-bubble">
-      hola, tienes formulario para cambiar el celular?
+    <div class="bot-avatar">
+      <img src="bot-icon.png" alt="Avatar del bot" />
+    </div>
+
+    <div class="chat-bubble" style="margin-top: 2rem;">
+      hola, ¿tienes formulario para cambiar el celular?
     </div>
   </div>
 
   <footer>
-    © 2025 LibiEducando · Desarrollado con ❤️ para facilitar tu día
+    © 2025 LibiEducando · Desarrollado con <span>💖</span> para facilitar tu día
   </footer>
 
 </body>
