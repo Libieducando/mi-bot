@@ -6,91 +6,78 @@
   <title>LibiEducando</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #eef6ff;
-      color: #333;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f7ff;
       text-align: center;
     }
-
-    header, footer {
-      background-color: #d6eaff;
-      padding: 20px;
+    header {
+      background-color: #d8eafe;
+      padding: 2rem 1rem;
     }
-
-    img {
+    header h1 {
+      margin: 0;
+      color: #1c2c5b;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      color: #4a4a4a;
+    }
+    main {
+      padding: 2rem 1rem;
+    }
+    main img {
       max-width: 100%;
       height: auto;
-      margin-top: 20px;
+      border-radius: 1rem;
     }
-
-    .card {
-      background-color: #fff;
-      border-radius: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin: 30px auto;
-      padding: 20px;
-      max-width: 500px;
-    }
-
-    .saludo {
-      font-size: 24px;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-
     .mensaje {
-      margin: 10px 0;
-      font-size: 18px;
+      margin: 1rem 0;
+      font-size: 1.1rem;
     }
-
     .input-simulado {
-      margin-top: 20px;
-      background-color: #f4f4f4;
-      padding: 12px;
-      border-radius: 20px;
+      background: #f2f2f2;
       display: inline-block;
-      color: #555;
+      padding: 1rem;
+      border-radius: 1.5rem;
+      color: #444;
     }
-
     footer {
-      font-size: 14px;
-      margin-top: 40px;
+      margin-top: 2rem;
+      padding: 1rem;
+      background: #d8eafe;
+      font-size: 0.9rem;
+      color: #333;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>LibiEducando</h1>
     <p>Tu asistente para tareas diarias de soporte</p>
   </header>
 
-  <div class="card">
-    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Imagen del Bot" />
-    <div class="saludo">LibiEducando</div>
-    <div class="mensaje">¡Hola! Quiero ayudarte a encontrar lo que necesitas.<br>¡Comencemos!</div>
+  <main>
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Imagen del Bot">
+    <div class="mensaje"><strong>LibiEducando</strong><br>
+      ¡Hola! Quiero ayudarte a encontrar lo que necesitas.<br>¡Comencemos!
+    </div>
     <div class="input-simulado">¿Qué tarea necesitas realizar? Te ayudo a buscar.</div>
-  </div>
+  </main>
 
   <footer>
     © 2025 LibiEducando · Desarrollado con ❤️ para facilitar tu día
   </footer>
 
-  <!-- Botpress Webchat -->
+  <!-- Cargar script de Botpress -->
   <script src="https://cdn.botpress.cloud/webchat/v3/botpressWebChat.js"></script>
   <script>
     window.botpressWebChat.init({
       configUrl: "https://files.bpcontent.cloud/2025/06/09/22/20250609222340-SRJCB38E.json",
-      botId: "LibiEducando",
-      hostUrl: "https://cdn.botpress.cloud/webchat/v3",
-      hideWidget: false,
-      showWidget: true
-    });
-
-    // Abrir el chat automáticamente
-    window.addEventListener('load', function () {
-      window.botpressWebChat.sendEvent({ type: 'show' });
+      showWidget: true,
+      openWidget: true
     });
   </script>
 </body>
