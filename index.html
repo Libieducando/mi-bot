@@ -6,80 +6,77 @@
   <title>LibiEducando</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #e9f4ff;
       margin: 0;
-      padding: 0;
-      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0fb;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
-      background-color: #dbefff;
-      padding: 2rem 1rem 3rem;
+      text-align: center;
+      padding: 2rem 1rem 1rem;
     }
 
-    h1 {
-      color: #0a1172;
+    header h1 {
+      margin: 0;
       font-size: 2.5rem;
+      color: #001a66;
     }
 
-    p {
+    header p {
+      margin: 0.5rem 0 0;
       font-size: 1.2rem;
       color: #333;
-      margin: 0.5rem 0;
     }
 
-    .bot-avatar img {
-      width: 300px;
+    main {
+      background: white;
       border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      margin-top: -40px;
-    }
-
-    .chat-container {
-      background-color: white;
-      margin: 30px auto;
-      width: 90%;
       max-width: 600px;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 1rem auto;
       padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
-    .welcome-title {
+    main img {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    .saludo {
       font-weight: bold;
       font-size: 1.2rem;
       margin-top: 1rem;
     }
 
-    .welcome-text {
+    .mensaje {
       font-size: 1rem;
-      color: #555;
-      margin-bottom: 1.5rem;
+      color: #444;
+      margin: 0.5rem 0;
     }
 
-    .input-bar {
-      background-color: #f2f2f2;
-      border-radius: 25px;
-      padding: 12px 20px;
-      margin: 0 auto;
-      display: inline-block;
-      max-width: 80%;
+    .input-simulado {
+      margin-top: 1.5rem;
+      background: #f3f3f3;
+      border-radius: 30px;
+      padding: 1rem;
+      color: #555;
       font-size: 1rem;
-      color: #333;
+      display: inline-block;
     }
 
     footer {
-      background-color: #dde6f1;
+      margin-top: auto;
+      background-color: #dde6f2;
       padding: 1rem;
+      text-align: center;
       font-size: 0.9rem;
-      color: #333;
-      margin-top: 2rem;
-    }
-
-    footer span {
-      color: #e25581;
-      font-weight: bold;
+      color: #444;
     }
   </style>
 </head>
@@ -90,25 +87,24 @@
     <p>Tu asistente para tareas diarias de soporte</p>
   </header>
 
-  <div class="chat-container">
-    <div class="bot-avatar">
-      <img src="bot-icon.png" alt="Avatar del bot" />
-    </div>
-
-    <div class="welcome-title">LibiEducando</div>
-    <div class="welcome-text">
-      ¡Hola! Quiero ayudarte a encontrar lo que necesitas.<br />
-      ¡Comencemos!
-    </div>
-
-    <div class="input-bar">
-      ¿Qué tarea necesitas realizar? Te ayudo a buscar.
-    </div>
-  </div>
+  <main>
+    <img src="bot-icon.png" alt="Imagen del Bot" />
+    <div class="saludo">LibiEducando</div>
+    <div class="mensaje">¡Hola! Quiero ayudarte a encontrar lo que necesitas.<br>¡Comencemos!</div>
+    <div class="input-simulado">¿Qué tarea necesitas realizar? Te ayudo a buscar.</div>
+  </main>
 
   <footer>
-    © 2025 LibiEducando · Desarrollado con <span>💖</span> para facilitar tu día
+    © 2025 LibiEducando · Desarrollado con ❤️ para facilitar tu día
   </footer>
+
+  <!-- Botpress Webchat integrado -->
+  <script src="https://cdn.botpress.cloud/webchat/v3"></script>
+  <script>
+    window.botpressWebChat.init({
+      configUrl: "https://files.bpcontent.cloud/2025/06/09/22/20250609222340-SRJCB38E.json"
+    });
+  </script>
 
 </body>
 </html>
