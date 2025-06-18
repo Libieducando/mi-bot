@@ -2,64 +2,61 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LibiEducando</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #e6f0fb;
+      font-family: Arial, sans-serif;
       text-align: center;
+      background-color: #f5f9ff;
+      color: #1c1c1c;
+      margin: 0;
+      padding: 0;
     }
     header {
-      padding: 2rem;
-      background-color: #d1e8ff;
+      background-color: #cfe2ff;
+      padding: 30px;
     }
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: #0b2c6a;
+      font-size: 2.5em;
+      color: #1c2d5a;
     }
     header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.2rem;
+      font-size: 1.2em;
+      color: #4d4d4d;
     }
     main {
-      padding: 2rem;
-      background: white;
-      margin: 2rem auto;
-      max-width: 600px;
-      border-radius: 20px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 40px 20px;
     }
-    main img {
-      max-width: 100%;
-      border-radius: 12px;
-      margin-bottom: 1rem;
+    img {
+      width: 300px;
+      border-radius: 20px;
     }
     .saludo {
       font-weight: bold;
-      font-size: 1.3rem;
+      font-size: 1.5em;
+      margin-top: 20px;
     }
     .mensaje {
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      color: #333;
+      margin: 10px auto;
+      font-size: 1.2em;
+      color: #444;
     }
     .input-simulado {
-      margin-top: 1rem;
-      background: #f1f1f1;
-      padding: 0.8rem 1rem;
-      border-radius: 20px;
+      background-color: #f1f1f1;
+      padding: 12px;
+      border-radius: 15px;
       display: inline-block;
-      font-style: italic;
-      color: #555;
+      margin-top: 10px;
+      font-size: 1em;
+      color: #666;
     }
     footer {
-      background: #d1e8ff;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #333;
+      margin-top: 40px;
+      background-color: #e2edff;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #555;
     }
   </style>
 </head>
@@ -71,11 +68,9 @@
   </header>
 
   <main>
-    <img src="bot-icon.png" alt="Imagen del Bot" />
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Imagen del Bot" />
     <div class="saludo">LibiEducando</div>
-    <div class="mensaje">
-      ¡Hola! Quiero ayudarte a encontrar lo que necesitas.<br>¡Comencemos!
-    </div>
+    <div class="mensaje">¡Hola! Quiero ayudarte a encontrar lo que necesitas.<br>¡Comencemos!</div>
     <div class="input-simulado">¿Qué tarea necesitas realizar? Te ayudo a buscar.</div>
   </main>
 
@@ -83,13 +78,13 @@
     © 2025 LibiEducando · Desarrollado con ❤️ para facilitar tu día
   </footer>
 
-  <!-- Botpress Webchat -->
-<script src="https://cdn.botpress.cloud/webchat/v3/botpressWebChat.js"></script>
-<script>
-  window.botpressWebChat.init({
-    configUrl: "https://files.bpcontent.cloud/2025/06/09/22/20250609222340-SRJCB38E.json"
-  });
-</script>
+  <!-- Botpress Webchat integrado -->
+  <script src="https://cdn.botpress.cloud/webchat/v3/botpressWebChat.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      configUrl: "https://files.bpcontent.cloud/2025/06/09/22/20250609222340-SRJCB38E.json"
+    });
+  </script>
 
 </body>
 </html>
