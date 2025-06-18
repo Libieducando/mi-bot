@@ -26,6 +26,7 @@
     p {
       font-size: 1.2rem;
       color: #333;
+      margin: 0.5rem 0;
     }
 
     .bot-avatar img {
@@ -45,14 +46,27 @@
       padding: 2rem;
     }
 
-    .chat-bubble {
-      background-color: #a34bc7;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 20px;
-      display: inline-block;
+    .welcome-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .welcome-text {
       font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-bar {
+      background-color: #f2f2f2;
+      border-radius: 25px;
+      padding: 12px 20px;
+      margin: 0 auto;
+      display: inline-block;
       max-width: 80%;
+      font-size: 1rem;
+      color: #333;
     }
 
     footer {
@@ -81,8 +95,14 @@
       <img src="bot-icon.png" alt="Avatar del bot" />
     </div>
 
-    <div class="chat-bubble" style="margin-top: 2rem;">
-      hola, ¿tienes formulario para cambiar el celular?
+    <div class="welcome-title">LibiEducando</div>
+    <div class="welcome-text">
+      ¡Hola! Quiero ayudarte a encontrar lo que necesitas.<br />
+      ¡Comencemos!
+    </div>
+
+    <div class="input-bar">
+      ¿Qué tarea necesitas realizar? Te ayudo a buscar.
     </div>
   </div>
 
