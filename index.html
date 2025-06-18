@@ -1,75 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LibiEducando - Tu asistente de soporte</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LibiEducando - Asistente de Soporte</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f7fc;
-      color: #333;
-      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
-      background-color: #295bda;
+      background-color: #1d4ed8;
       color: white;
-      padding: 2rem 1rem;
+      padding: 20px;
+      text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2em;
     }
 
     header p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
+      margin: 5px 0 0;
+      font-size: 1.1em;
     }
 
-    #bot {
-      margin: 2rem auto;
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .chat-container {
       width: 100%;
-      max-width: 600px;
-      height: 600px;
+      max-width: 420px;
+      height: 650px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: white;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
       border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     footer {
-      margin: 3rem 0 1rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-
-    .logo {
-      max-height: 60px;
-      margin-bottom: 1rem;
+      text-align: center;
+      padding: 15px;
+      background-color: #e5e7eb;
+      font-size: 0.9em;
+      color: #333;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <!-- Si tenés un logo, reemplazá el src con el link -->
-    <!-- <img class="logo" src="TU_LOGO_URL" alt="LibiEducando Logo" /> -->
     <h1>LibiEducando</h1>
     <p>Tu asistente para tareas diarias de soporte</p>
   </header>
 
-  <iframe
-    id="bot"
-    src="https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/09/22/20250609222340-SRJCB38E.json"
-    allow="clipboard-write"
-  ></iframe>
+  <main>
+    <div class="chat-container">
+      <iframe 
+        src="https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/09/22/20250609222340-SRJCB38E.json"
+        allow="microphone; camera">
+      </iframe>
+    </div>
+  </main>
 
   <footer>
-    © 2025 LibiEducando - Bot desarrollado con ❤️
+    &copy; 2025 LibiEducando. Todos los derechos reservados.
   </footer>
-
 </body>
 </html>
