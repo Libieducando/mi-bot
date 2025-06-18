@@ -99,12 +99,15 @@
   </footer>
 
   <!-- Botpress Webchat integrado -->
-  <script src="https://cdn.botpress.cloud/webchat/v3"></script>
-  <script>
+<script src="https://cdn.botpress.cloud/webchat/v3"></script>
+<script>
+  window.addEventListener('load', function () {
     window.botpressWebChat.init({
-      configUrl: "https://files.bpcontent.cloud/2025/06/09/22/20250609222340-SRJCB38E.json"
+      configUrl:
+        "https://files.bpcontent.cloud/2025/06/09/22/20250609222340-SRJCB38E.json"
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
