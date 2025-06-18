@@ -2,79 +2,81 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LibiEducando</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f0fa;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #e6f0fb;
+      padding: 0;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
     header {
+      background-color: #cce3fc;
       text-align: center;
       padding: 2rem 1rem 1rem;
     }
 
     header h1 {
+      color: #0d1c5b;
       margin: 0;
       font-size: 2.5rem;
-      color: #001a66;
     }
 
     header p {
-      margin: 0.5rem 0 0;
       font-size: 1.2rem;
-      color: #333;
+      color: #444;
     }
 
     main {
-      background: white;
-      border-radius: 20px;
-      max-width: 600px;
-      margin: 1rem auto;
+      flex: 1;
       padding: 2rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f6f9fc;
     }
 
     main img {
       width: 300px;
-      max-width: 100%;
-      border-radius: 12px;
-      margin-bottom: 1.5rem;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
     }
 
     .saludo {
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       margin-top: 1rem;
+      text-align: center;
     }
 
     .mensaje {
-      font-size: 1rem;
-      color: #444;
-      margin: 0.5rem 0;
+      text-align: center;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     .input-simulado {
-      margin-top: 1.5rem;
-      background: #f3f3f3;
-      border-radius: 30px;
-      padding: 1rem;
-      color: #555;
+      background-color: #f0f0f0;
+      border-radius: 20px;
+      padding: 0.8rem 1.5rem;
       font-size: 1rem;
-      display: inline-block;
+      color: #333;
+      text-align: center;
+      max-width: 400px;
     }
 
     footer {
-      margin-top: auto;
-      background-color: #dde6f2;
-      padding: 1rem;
+      background-color: #d8e6f5;
       text-align: center;
+      padding: 1rem;
       font-size: 0.9rem;
       color: #444;
     }
@@ -99,15 +101,17 @@
   </footer>
 
   <!-- Botpress Webchat integrado -->
-<script src="https://cdn.botpress.cloud/webchat/v3"></script>
-<script>
-  window.addEventListener('load', function () {
-    window.botpressWebChat.init({
-      configUrl:
-        "https://files.bpcontent.cloud/2025/06/09/22/20250609222340-SRJCB38E.json"
+  <script src="https://cdn.botpress.cloud/webchat/v3"></script>
+  <script>
+    window.addEventListener('load', function () {
+      window.botpressWebChat.init({
+        configUrl: "https://files.bpcontent.cloud/2025/06/09/22/20250609222340-SRJCB38E.json",
+        showWidget: true,
+        lazySocket: false
+      });
     });
-  });
-</script>
+  </script>
 
 </body>
 </html>
+
